@@ -33,28 +33,12 @@ module.exports = (env, argv) => {
 		devServer: {
 			contentBase: PATH.dist,
 			publicPath: '/',
-			port: 8081,
-			overlay: {
-				warnings: true,
-				errors: true,
-			},
+			port: 9090,
 		},
 		output: {
 			filename: 'index.[hash].js',
 			path: PATH.dist,
 			publicPath: '/',
-		},
-		optimization: {
-			splitChunks: {
-				cacheGroups: {
-					vendor: {
-						name: 'vendors',
-						test: /node_modules/,
-						chunks: 'all',
-						enforce: true,
-					},
-				},
-			},
 		},
 		module: {
 			rules: [
@@ -110,6 +94,7 @@ module.exports = (env, argv) => {
 				filename: 'index.[hash].css',
 			}),
 			new HtmlWebpackPlugin({
+				favicon: 'src/assets/Logo.png',
 				template: path.resolve(PATH_RESOLVE, 'index.html'),
 			}),
 			new webpack.NamedModulesPlugin(),
