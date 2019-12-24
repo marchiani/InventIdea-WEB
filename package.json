@@ -1,0 +1,79 @@
+{
+  "name": "webpacktemplate",
+  "version": "1.0.0",
+  "description": "My template",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack-dev-server --mode=development --inline --quiet --hot --open --sub=app --environment=dev",
+    "build:app": "webpack --mode=production --sub=app --environment=dev"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 3 version"
+  ],
+  "author": "https://github.com/marchiani",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marchiani/InventIdea-WEB.git"
+  },
+  "bugs": {
+    "url": "https://github.com/marchiani/InventIdea-WEB/issues"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.7.7",
+    "@babel/plugin-proposal-async-generator-functions": "^7.7.4",
+    "@babel/plugin-proposal-class-properties": "^7.7.4",
+    "@babel/plugin-proposal-decorators": "^7.7.4",
+    "@babel/plugin-proposal-export-default-from": "^7.7.4",
+    "@babel/plugin-proposal-nullish-coalescing-operator": "^7.7.4",
+    "@babel/plugin-proposal-object-rest-spread": "^7.7.7",
+    "@babel/plugin-proposal-optional-chaining": "^7.7.5",
+    "@babel/plugin-proposal-throw-expressions": "^7.7.4",
+    "@babel/preset-env": "^7.7.7",
+    "@babel/preset-flow": "^7.7.4",
+    "@babel/preset-react": "^7.7.4",
+    "@babel/preset-stage-0": "^7.0.0",
+    "@hot-loader/react-dom": "^16.11.0",
+    "autoprefixer": "^9.6.1",
+    "babel-eslint": "^10.0.3",
+    "babel-loader": "^8.0.6",
+    "css-loader": "^3.0.0",
+    "css-mqpacker": "^7.0.0",
+    "cssnano": "^4.1.10",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-plugin-import": "^2.19.1",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.17.0",
+    "eslint-plugin-react-hooks": "^2.3.0",
+    "file-loader": "^4.0.0",
+    "html-webpack-plugin": "^3.2.0",
+    "mini-css-extract-plugin": "^0.5.0",
+    "node-sass": "^4.12.0",
+    "postcss-loader": "^3.0.0",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.35.3",
+    "webpack-cli": "^3.3.6",
+    "webpack-dev-server": "^3.4.1",
+    "webpack-merge": "^4.2.1"
+  },
+  "dependencies": {
+    "@babel/plugin-transform-runtime": "^7.7.6",
+    "axios": "^0.19.0",
+    "mobx": "^5.15.1",
+    "mobx-react": "^6.1.4",
+    "mobx-react-devtools": "^6.1.1",
+    "mobx-state-tree": "^3.15.0",
+    "moment": "^2.24.0",
+    "prop-types": "^15.7.2",
+    "query-string": "^6.9.0",
+    "react": "^16.12.0",
+    "react-device-detect": "^1.11.14",
+    "react-dom": "^16.12.0",
+    "react-hot-loader": "^4.12.18",
+    "react-icons": "^3.8.0",
+    "react-router-dom": "^5.1.2"
+  }
+}
