@@ -53,34 +53,13 @@ module.exports = (env, argv) => {
 					options: {
 						name: '[name].[ext]',
 					},
-				}, {
+				},
+				{
 					test: /\.scss$/,
 					use: [
 						'style-loader',
-						MiniCssExtractPlugin.loader,
-						{
-							loader: 'css-loader',
-							options: { sourceMap: true },
-						}, {
-							loader: 'postcss-loader',
-							options: { sourceMap: true, config: { path: './postcss.config.js' } },
-						}, {
-							loader: 'sass-loader',
-							options: { sourceMap: true },
-						},
-					],
-				}, {
-					test: /\.css$/,
-					use: [
-						'style-loader',
-						MiniCssExtractPlugin.loader,
-						{
-							loader: 'css-loader',
-							options: { sourceMap: true },
-						}, {
-							loader: 'postcss-loader',
-							options: { sourceMap: true, config: { path: './postcss.config.js' } },
-						},
+						'css-loader',
+						'sass-loader',
 					],
 				}],
 		},
@@ -94,7 +73,7 @@ module.exports = (env, argv) => {
 				filename: 'index.[hash].css',
 			}),
 			new HtmlWebpackPlugin({
-				favicon: 'src/assets/Logo.png',
+				favicon: 'src/assets/Logo.jpg',
 				template: path.resolve(PATH_RESOLVE, 'index.html'),
 			}),
 			new webpack.NamedModulesPlugin(),
